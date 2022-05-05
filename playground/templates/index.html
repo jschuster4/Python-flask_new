@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- add CSS elements here -->
+    <style>
+        .box{
+            margin: 10px 30px;
+            border: black 2px solid;
+            width: 200px;
+            height: 200px;
+        }
+        .container{
+            display: flex;
+        }
+        .wholepagecontainer{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wholepagecontainer">
+        <h1 class="welcome">Welcome!</h1>
+        <div class="container">
+        {% for x in range(0,num_boxes) %}
+            <div class="box" style="background-color: {{color}};" ></div>
+        {% endfor %}
+
+        </div>
+    </div>
+
+</body>
+</html>
