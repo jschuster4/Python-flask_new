@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- add CSS elements here -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="wholepagecontainer">
+        <h1>***Checkerboard***</h1>
+        <div class="checkerboard">
+            <table>
+                {% for y in range(0, number_rows) %}
+                <tr>
+                    {% for x in range(0, number_columns) %}
+                        {% if (x + y) % 2 == 0 %}
+                            <td class="color2" style="background-color: {{color1}};"></td>
+                        {% else %}
+                            <td class="color1" style="background-color: {{color2}};"></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        
+
+        </div>
+    </div>
+
+</body>
+</html>
